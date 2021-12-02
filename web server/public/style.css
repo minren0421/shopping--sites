@@ -1,0 +1,149 @@
+.container{
+    max-width:100%;
+    padding:0;
+    
+}
+/* 頁頭樣式 */
+body{
+    padding-bottom: 100px;
+
+}
+.tophead{
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+}
+.headimg{
+    width: 150px;
+    height: 90px;
+    margin-left: 50px;
+    
+}
+.serach{
+    margin-top: 30px;
+}
+/* 導航欄 */
+.navbar{
+    padding: 0;
+    width: 100%;
+    height: 50px; 
+    
+}
+.navbar-nav li{
+    margin-left: 40px;
+}
+.container-fluid{
+    background-color: #f1f1f1;
+    height: 100%;
+    
+}
+.menu{
+    background-color: #ddd;
+    text-align: left;
+    font-size: 0pt;
+}
+.menu a{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 15px;
+}
+.menu :first-child{
+    margin-left: 100px;
+}
+.menu a:hover{
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+/* 輪播 */
+.carousel-control-prev,
+.carousel-control-next {
+    width:4%;
+    height: 20%;
+    background-color: #aaa;
+    border-radius: 0.5rem;
+    top:40%;
+}
+.carousel-indicators li{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+    background-color: #fff;
+}
+.carousel-indicators .active{
+    background-color: #0aa1ed;
+}
+.carouselhead .carousel-item>img{
+    display: block;
+    width: 100%;
+    height: 450px;
+} 
+
+/* 熱門商品 */
+.productname{
+    margin: 20px;
+    margin-left: 50px;
+    border-bottom: 2px solid #aaa;
+    padding: 10px;
+}
+
+.productlist{
+    width: 100%;
+    font-size:16px;
+    list-style:none;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    text-align: center;
+}
+
+/* 頁尾樣式 */
+.footer{
+    margin-top: 60px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.footer .footerlist li{
+   
+    list-style: none;
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.footer h6{
+    font-size: 14px;
+    color: #666;
+    font-weight: lighter;
+    line-height: 28px;
+}
+.footeritem{
+    
+    display: flex;
+    justify-content: center;
+}
+
+/* 麵包屑 */
+.breadcrumb-item + .breadcrumb-item::before{
+    content:'>';
+    color: #aaa;
+}
+.breadcrumb{
+    background-color: #fff;
+    font-size: 10px ;
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+.breadcrumb-item a{
+    color:#aaa
+}
+
+/* 收藏品樣式 */
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="vue.js"></script>
+    <title>Document</title>
+    <style>
+        
+        .shopp .shopptop{
+            width: 960px;
+            height: 80px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+        .shopptopitem{
+            width: 30%;
+            text-align: center;
+            padding: 10px 0;
+            border-top:2px solid #ccc;
+            margin-left: 2px;
+            border-radius: 0 2px 2px 0;
+            font-size: 14px;
+            font-weight: bold;
+            border-top: 2px solid #eee;
+            color: #ccc;
+        }
+        .shopptop .one{
+            border-top:2px solid #000;
+            color: #000;
+        }
+        .shopp h3{
+            width: 960px;
+            text-align: center;
+            margin: auto;
+            height: 70px;
+        }
+        .shoppcenter{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            border-bottom: 2px solid #ccc;
+        }
+        .shoppcenter div+div{
+            text-align: center;
+        }
+
+        /*  */
+        .shoppproduct{
+            width: 1200px;
+            margin: auto;
+        }
+        .shoppimg{
+           
+            width: 600px;
+            height: 200px;
+            display: flex;
+            
+        }
+        .shoppimg-img {
+            width: 160px;
+        }
+        .shoppimg-img img{
+            width: 100%;
+        }
+        .shoppimg p{
+            display: inline-block;
+            margin-top: 30px;
+        }
+        .shoppproduct{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            border-bottom: 2px solid #ccc;
+        }
+        .shoppproduct div+div{
+            
+            width: 200px;
+            justify-content: center;
+        }
+        .shopp-item{
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        /* 總計頁尾*/
+        .total-list{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            box-sizing: border-box;
+            text-align: center;
+            align-items: center;
+            
+        }
+        .total-list div {
+            height: 50px;
+            border-right: 2px solid #ccc;
+            position: relative;
+            margin-top: 10px;
+            
+        }
+        .total-list span{
+            position: absolute;
+            left: 20px;
+            color: #797979;
+            font-size: 12px;
+        }
+        .total-list p{
+            position: absolute;
+            right: 10px;
+            top: 20px;
+        }
+        .totalproduct{
+            text-align: left;
+            padding: 10px 50px;
+            
+        }
+        .total{
+            border-top: 1px solid #ccc;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            margin-top: 100px;
+        }
+        body{
+            padding-bottom: 100px;
+        }
+    </style>
+    <script>
+        Vue.component('counter',{
+            template:`<div class="shopp-item">
+                    <button @click="change(1)">+</button>
+                    <span>{{n}}</span>
+                    <button @click="change(-1)">-</button>
+                </div>`,
+                data(){
+                    return {
+                        n:1
+                    }
+                },
+                methods:{
+                    change(i){
+                        this.n+=i
+                        this.n<1&&(this.n=1);
+                
+                    }
+                }
+        })
+    </script>
+</head>
+<body>
+    <div class="container" id="app">
+        <!--頁頭 -->
+        <div class="tophead">
+            <img  class="headimg" src="./carousel/23.png" >
+            <div class="serach">
+                <input  type="text">
+            </div>
+        </div>
+        <!-- 導航欄 -->
+        <nav class="">
+            <div class="menu">
+                <a href="#">首頁</a>
+                <a href="#">關於</a>
+                <a href="#">收藏品</a>
+                <a href="#">購物車</a>
+                <a href="#">聯絡我們</a>
+            </div>
+        </nav>
+        <!-- 麵包屑 -->
+        <div>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="">首頁</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="">購物車</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 購物車 -->
+        <div class="shopp">
+            <div class="shopptop">
+                <div class="shopptopitem one">1.購物車</div>
+                <div class="shopptopitem two">2.資料填寫</div>
+            </div>    
+            <h3>購物車</h3>
+            <div class="shoppcenter row">
+                <div class="col-6">商品資訊</div>
+                <div class="col-2">價格</div>
+                <div class="col-2">數量</div>
+                <div class="col-2">合計</div>
+            </div>
+            <div class="shoppproduct " >
+                <div class="shoppimg">
+                    <input type="checkbox">
+                    <div class="shoppimg-img">
+                        <img src="./carousel/41.png" >
+                    </div>
+                    <p><b>BE@RBRICK/庫柏力克熊</b><br>100%&400% set BE@RBRICK Andy Warhol's ELVIS PRESLEY</p>
+                </div>
+                <div class="shopp-item">
+                    <p>$8800</p>
+                </div>
+                <counter></counter>
+                <div class="shopp-item"><p>${{price}}</p></div>
+            </div>
+            
+            
+        </div>
+        <!-- 總計頁尾 -->
+        <div class="total">
+            <div class="total-list row">
+                <div class="col-3 totalproduct">共0件商品</div>
+                <div class="col-2">
+                    <span>原價</span>
+                    <p>$8800</p>
+                </div>
+                <div class="col-2">
+                    <span>折扣</span>
+                    <p>$8800</p>
+                </div>
+                <div class="col-2">
+                    <span>合計</span>
+                    <p>$8800</p>
+                </div>
+                <div class="col-3">
+                    <a href="#"><img src="./carousel/09.png"></a>
+                </div>
+            </div> 
+        </div>
+    </div>    
+</body>
+<script>
+   let vm=new Vue({
+        el:'#app',
+        data:{
+            
+        },
+        methods:{
+            
+        }
+    })
+</script>
+</html>

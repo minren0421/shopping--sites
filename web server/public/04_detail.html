@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        
+        .detail{
+            
+            display: flex;
+            justify-content: space-between;
+            width: 970px;
+            margin-left: 15%;
+        }
+        .detail-img{
+            
+            width: 670px;
+            height: 570px;
+        }
+        .detail img{
+            width: 100%;
+        }
+        .details{
+            
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+            height: 370px;
+        }
+        .details a{
+            color: #333;
+        }
+        .details h6{
+            margin: 5px 0;
+            font-size: 20px;
+        }
+        .details .notice{
+            color: #797979;
+            margin-top: 30px;
+        }
+        .details p{
+         color: #f23e0c;   
+         font-size: 35px;
+         
+        }
+        .shopp{
+            width:200px;
+            height: auto;
+            margin-top: 20px;
+            
+        }
+        .shopp:hover img{
+            opacity: 0.5;
+            width:100%
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <!--頁頭 -->
+         <div class="tophead">
+            <img  class="headimg" src="./carousel/23.png" >
+            <div class="serach">
+                <input  type="text">
+            </div>
+        </div>
+        <!-- 導航欄 -->
+        <nav class="">
+            <div class="menu">
+                <a href="#">首頁</a>
+                <a href="#">關於</a>
+                <a href="#">收藏品</a>
+                <a href="#">購物車</a>
+                <a href="#">聯絡我們</a>
+            </div>
+        </nav>
+        <!-- 麵包屑 -->
+        <div>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="">首頁</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="">收藏品</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="">收藏詳情</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 商品詳情 -->
+        <div>
+            <div class="detail row">
+                <div class="detail-img col-6">
+                    <img src="./carousel/41.png" >
+                </div>
+                <div class="col-6">
+                    <div class="details">
+                        <u><a href="#">BE@RBRICK/庫柏力克熊</a></u>
+                        <h6>100%&400% set BE@RBRICK Andy Warhol's ELVIS PRESLEY</h6>
+                        <div class="notice">
+                            <span>
+                                
+                                "※退貨時需保持外盒完整包裝。
+                                ※商品表面因為製作過程多少會些許痕跡/小刮痕產生，外盒從海外空運來台，物流運送過程中難免會受到擠壓，敬請見諒 !(若對於商品標準較高者，建議下單前請三思)
+                                商品編號：PSJ21040003S6"
+                            </span>
+                        </div>
+                        <p class="price"><s style="font-size: 15px;color: #797979;">$8,800</s>$7,480</p> 
+                    </div>
+                    <div class="shopp">
+                        <img src="./carousel/10.png" >
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+         <!-- 頁尾 -->
+         <div class="footer">
+            <div class="footeritem">
+                <ul class="footerlist">
+                    <h6>IFCHIC.COM</h6>
+                    <li>關於我們</li>
+                    <li>合作聯盟</li>
+                    <li>服務條款</li>
+                    <li>隱私政策</li>
+                </ul>
+                <ul class="footerlist">
+                    <h6>我的帳戶</h6>
+                    <li>我的最愛</li>
+                    <li>個人資料</li>
+                    <li>我的地址</li>
+                    <li>訂單紀錄</li>
+                </ul>
+                <ul class="footerlist">
+                    <h6>遞送服務</h6>
+                    <li>運送資訊</li>
+                    <li>退換貨說明</li>
+                    <li>追蹤訂單</li>
+                </ul>
+                <ul class="footerlist">
+                    <h6>客服中心</h6>
+                    <li>聯絡我們</li>
+                    <li>Tel:(886)2-2699-3383</li>   
+                </ul>
+                <ul class="footerlist">
+                    <li><img src="./carousel/38.png" style="width: 100px;height: 100px;"></li>
+                </ul>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

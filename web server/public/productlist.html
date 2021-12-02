@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="axios.min.js"></script>
+    <title>Document</title>
+    <style>
+        
+        .collection{
+            width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .collection-list{
+            width: 200px;
+            margin: 20px 5px;
+            height: auto;
+            font-size: 14px;
+            line-height: 15px;
+            margin: 15px ;
+        }
+        .collection-list img{
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .collection-item{
+            font-size: 14px;
+            color: black;
+            text-decoration: none;
+        }
+        .collection-list p{
+            font-size: 14px;
+            line-height: 15px;
+            margin: 0;
+        }
+        .colora{
+            color: #F2310C;
+            text-decoration: none;
+        }
+        .collection-list .collection-item:hover {
+            color:#000; 
+            text-decoration:none; 
+            cursor:pointer;  
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body >
+    <div class="container" id="app">
+         <!--頁頭 -->
+         <div class="tophead">
+            <img  class="headimg" src="./carousel/23.png" >
+            <div class="serach">
+                <input  type="text">
+            </div>
+        </div>
+        <!-- 導航欄 -->
+        <nav class="">
+            <div class="menu">
+                <a href="#">首頁</a>
+                <a href="#">關於</a>
+                <a href="#">收藏品</a>
+                <a href="#">購物車</a>
+                <a href="#">聯絡我們</a>
+            </div>
+        </nav>
+        <!-- 麵包屑 -->
+        <div>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="">首頁</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="">收藏品</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 收藏品 -->
+        <div class="collection" >
+            <div class="collection-list" v-for="content of contents">
+                <a href="" class="collection-item">
+                    <img src='./carousel/41.png' >
+                    <b>{{content.dname}}</b>
+                    <p>{{content.title}}</p>
+                    <a href="#" class="colora" style="text-decoration: none;">${{content.price}}</a>
+                </a>
+            </div>
+    
+        </div>
+        <!-- 頁尾 -->
+        <div class="footer">
+            <div class="footeritem">
+                <ul class="footerlist">
+                    <h6>IFCHIC.COM</h6>
+                    <li>關於我們</li>
+                    <li>合作聯盟</li>
+                    <li>服務條款</li>
+                    <li>隱私政策</li>
+                </ul>
+                <ul class="footerlist">
+                    <h6>我的帳戶</h6>
+                    <li>我的最愛</li>
+                    <li>個人資料</li>
+                    <li>我的地址</li>
+                    <li>訂單紀錄</li>
+                </ul>
+                <ul class="footerlist">
+                    <h6>遞送服務</h6>
+                    <li>運送資訊</li>
+                    <li>退換貨說明</li>
+                    <li>追蹤訂單</li>
+                </ul>
+                <ul class="footerlist">
+                    <h6>客服中心</h6>
+                    <li>聯絡我們</li>
+                    <li>Tel:(886)2-2699-3383</li>   
+                </ul>
+                <ul class="footerlist">
+                    <li><img src="./carousel/38.png" style="width: 100px;height: 100px;"></li>
+                </ul>
+            </div>    
+        </div>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#app",
+        data:{
+            contents:[]
+        },
+        created(){
+            axios.get("/productdata/product").then((res)=>{
+                this.contents = res.data
+                console.log(res.data)
+            })
+        }
+
+    })
+</script>
+</html>
